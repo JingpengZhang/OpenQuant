@@ -688,8 +688,8 @@ class OpenQuoteContext:
         col_ask_list = ['ask_broker_id', 'ask_broker_name', 'ask_broker_pos']
 
         bid_frame_table = pd.DataFrame(bid_list, columns=col_bid_list)
-        sak_frame_table = pd.DataFrame(ask_list, columns=col_ask_list)
-        return RET_OK, bid_frame_table, sak_frame_table
+        ask_frame_table = pd.DataFrame(ask_list, columns=col_ask_list)
+        return RET_OK, bid_frame_table, ask_frame_table
 
     def subscribe(self, stock_code, data_type, push=False):
         """
